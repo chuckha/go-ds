@@ -3,8 +3,7 @@ Installing this package:
 
     go get github.com/ggnextmap/go-ds/...
 
-## Trie
-[Trie](http://en.wikipedia.org/wiki/Trie)
+## [Trie](http://en.wikipedia.org/wiki/Trie)
 Importing the Trie:
 
     import "github.com/ggnextmap/go-ds/trie"
