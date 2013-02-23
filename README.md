@@ -1,7 +1,14 @@
 # Data structures in Go
+Installing this package:
+
+   go get github.com/ggnextmap/go-ds/...
 
 ## Trie
 [Trie](http://en.wikipedia.org/wiki/Trie)
+Importing the Trie:
+
+    import "github.com/ggnextmap/go-ds/trie"
+
 Using the Trie:
 
 ```.go
