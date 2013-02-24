@@ -4,11 +4,11 @@ Installing this package:
     go get github.com/ggnextmap/go-ds/...
 
 ## [Trie](http://en.wikipedia.org/wiki/Trie)
-###Importing the Trie:
+### Importing the Trie:
 
     import "github.com/ggnextmap/go-ds/trie"
 
-###Using the Trie:
+### Using the Trie:
 
 ```.go
 t := trie.NewTrie()
@@ -23,3 +23,7 @@ t.Find("tree") // is true
     go test github.com/ggnextmap/go-ds/trie
     go test -test.bench=".*" github.com/ggnextmap/go-ds/trie
 
+### ToDo
+
+* Removing a key
+* Passing tests

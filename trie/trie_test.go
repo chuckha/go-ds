@@ -33,6 +33,10 @@ func TestFind(t *testing.T) {
 	if trie.Find("William") == true {
 		t.Errorf("Should not have found William")
 	}
+
+	if trie.Find("Bil") == true {
+		t.Errorf("Bil should not be considered in the trie")
+	}
 }
 
 func BenchmarkManyWordsTrie(b *testing.B) {
