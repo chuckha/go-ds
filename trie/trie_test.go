@@ -2,25 +2,43 @@ package trie
 
 import (
 	"testing"
+	"math/rand"
+	"time"
 )
 
-func TestT(t *testing.T) {
+func TestInsert(t *testing.T) {
 	trie := NewTrie()
-	vals := []string{"A", "to", "tea", "ted", "ten", "i", "in", "inn"}
 
-	trie.Insert(vals[0])
+	trie.Insert("Ted")
 
-	if trie.Find("A") != true {
-		t.Errorf("Should have found 'A'")
+	if len(trie.Node) != 1 {
+		t.Errorf("Should have one node")
+	}
+}
+
+func TestFind(t *testing.T) {
+	trie := NewTrie()
+
+	trie.Insert("Bill")
+
+	if trie.Find("Bill") != true {
+		t.Errorf("Should have found Bill")
 	}
 
-	trie.Insert(vals[2])
-
-	if trie.Find("tea") != true {
-		t.Errorf("Should have found 'tea'")
+	if trie.Find("William") == true {
+		t.Errorf("Should not have found William")
 	}
+}
 
-	if trie.Find("nope") == true {
-		t.Errorf("Should not have but did find 'nope'")
+func BenchmarkManyWordsTrie(b *testing.B) {
+	trie := NewTrie()
+	rand.Seed(time.Now().UnixNano())
+
+	for i := 0; i < b.N; i++ {
+		word := ""
+		for j := 0; j < (rand.Int() % 7) + 8; j++ {
+			word += string((rand.Int() % 57) + 65)
+		}
+		trie.Insert(word)
 	}
 }
