@@ -14,6 +14,11 @@ func TestInsert(t *testing.T) {
 	if len(trie.Node) != 1 {
 		t.Errorf("Should have one node")
 	}
+
+	trie.Insert("Ten")
+	if len(trie.Node) != 1 {
+		t.Errorf("Should still have one node")
+	}
 }
 
 func TestFind(t *testing.T) {

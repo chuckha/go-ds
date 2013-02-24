@@ -17,3 +17,9 @@ t.Insert("ten")
 t.Insert("tree")
 t.Find("tree") // is true
 ```
+
+### Testing and Benchmarking:
+
+    go test github.com/ggnextmap/go-ds/trie
+    go test -test.bench=".*" github.com/ggnextmap/go-ds/trie
+
