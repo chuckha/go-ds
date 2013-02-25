@@ -26,4 +26,3 @@ t.Find("tree") // is true
 ### ToDo
 
 * Removing a key
-* Passing tests
