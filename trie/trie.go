@@ -37,3 +37,4 @@ func (t Trie) Find(key string) bool {
 	}
 	return cn.End
 }
+

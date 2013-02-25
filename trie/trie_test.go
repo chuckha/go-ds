@@ -26,15 +26,15 @@ func TestFind(t *testing.T) {
 
 	trie.Insert("Bill")
 
-	if trie.Find("Bill") != true {
+	if !trie.Find("Bill") {
 		t.Errorf("Should have found Bill")
 	}
 
-	if trie.Find("William") == true {
+	if trie.Find("William") {
 		t.Errorf("Should not have found William")
 	}
 
-	if trie.Find("Bil") == true {
+	if trie.Find("Bil") {
 		t.Errorf("Bil should not be considered in the trie")
 	}
 }
