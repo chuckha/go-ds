@@ -26,3 +26,20 @@ t.Find("tree") // is true
 ### ToDo
 
 * Removing a key
+
+## [Suffix Tree](http://en.wikipedia.org/wiki/Suffix_tree)
+### Importing the Suffix Tree:
+
+    import "github.com/ggnextmap/go-ds/suffixtree"
+
+## Using the Suffix Tree:
+
+```.go
+```
+
+## Testing and Benchmarking:
+
+    go test github.com/ggnextmap/go-ds/suffixtree
+    go test -test.bench=".*" github.com/ggnextmap/go-ds/suffixtree
+
+## ToDo
